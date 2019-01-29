@@ -5,13 +5,12 @@
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
-    <SpaRoot>ClientApp\</SpaRoot>
+    <SpaRoot>app\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +18,54 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="app\build\asset-manifest.json" />
+    <Content Remove="app\build\manifest.json" />
+    <Content Remove="package-lock.json" />
+    <Content Remove="package.json" />
+    <Content Remove="app\public\manifest.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="app\build\service-worker.js" />
+    <None Remove="app\build\static\js\main.02a5e8ce.js" />
+    <None Remove="app\src\App.js" />
+    <None Remove="app\src\App.test.js" />
+    <None Remove="app\src\components\Layout.js" />
+    <None Remove="app\src\components\Matrix.js" />
+    <None Remove="app\src\components\MatrixCell.js" />
+    <None Remove="app\src\config\index.js" />
+    <None Remove="app\src\helpers\fibonacciSequence.js" />
+    <None Remove="app\src\index.js" />
+    <None Remove="app\src\registerServiceWorker.js" />
+    <None Remove="app\src\store\configureStore.js" />
+    <None Remove="app\src\store\CounterMatrix.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="app\build\asset-manifest.json" />
+    <None Include="app\build\manifest.json" />
+    <None Include="app\package-lock.json" />
+    <None Include="app\package.json" />
+    <None Include="app\public\manifest.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="app\build\service-worker.js" />
+    <TypeScriptCompile Include="app\build\static\js\main.02a5e8ce.js" />
+    <TypeScriptCompile Include="app\src\App.js" />
+    <TypeScriptCompile Include="app\src\App.test.js" />
+    <TypeScriptCompile Include="app\src\components\Layout.js" />
+    <TypeScriptCompile Include="app\src\components\Matrix.js" />
+    <TypeScriptCompile Include="app\src\components\MatrixCell.js" />
+    <TypeScriptCompile Include="app\src\config\index.js" />
+    <TypeScriptCompile Include="app\src\helpers\fibonacciSequence.js" />
+    <TypeScriptCompile Include="app\src\index.js" />
+    <TypeScriptCompile Include="app\src\registerServiceWorker.js" />
+    <TypeScriptCompile Include="app\src\store\configureStore.js" />
+    <TypeScriptCompile Include="app\src\store\CounterMatrix.js" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -1,0 +1,13 @@
+﻿.matrix-row {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: visible;
+    height: 19px;
+}
+
+.matrix {
+    user-select: none;
+    cursor: pointer;
+}

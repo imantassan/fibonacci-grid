@@ -1,0 +1,53 @@
+﻿.matrix-cell {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 -1px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    display: inline-block;
+}
+
+    .matrix-cell:hover {
+        background-color: #b0e0e6;
+    }
+
+.matrix-cell-changed {
+    animation: yellow-highlight 1s;
+}
+
+.matrix-cell-active {
+    animation: green-highlight 5s;
+}
+
+@keyframes green-highlight {
+    0% {
+        background-color: lightgreen;
+    }
+
+    75% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes yellow-highlight {
+    0% {
+        background-color: lightgoldenrodyellow;
+    }
+
+    50% {
+        background-color: lightgoldenrodyellow;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
