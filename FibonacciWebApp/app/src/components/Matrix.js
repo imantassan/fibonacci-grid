@@ -34,11 +34,16 @@ export class Matrix extends React.Component {
         return <div className="matrix">
             {[...Array(matrixSize.height).keys()].map(row =>
                 <div className="matrix-row" key={row}>
-                    {[...Array(matrixSize.width).keys()].map(column => <MatrixCell
-                        key={`${row},${column},${this.props.matrix[`${row},${column}`].count}`}
-                        cell={this.props.matrix[`${row},${column}`]}
-                        onClick={this.handleCellMouseClick}
-                    />)}
+                    {[...Array(matrixSize.width).keys()].map(column => {
+                        if (!!this.props.matrix && this.props.matrix[`${row},${column}`]) {
+                            return <MatrixCell
+                                key={`${row},${column},${this.props.matrix[`${row},${column}`].count}`}
+                                cell={this.props.matrix[`${row},${column}`]}
+                                onClick={this.handleCellMouseClick}
+                            />;
+                        }
+                        return null;
+                    })}
                 </div>)}
         </div>;
     }
