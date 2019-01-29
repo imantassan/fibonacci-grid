@@ -3,11 +3,10 @@
 // Cache of fibonacci numbers. The sequence is calculated and extended on demand.
 export const fibonacciSequence = (function() {
     // Holds all the fibonacci numbers
-    const sequence = [0, 1, 1];
+    const sequence = [1, 1];
     // Stores indexes of fibonacci numbers within the sequence
     const indexes = {
-        0: 1,
-        1: 3
+        1: 2
     };
 
     // Calculates the next fibonacci number and adds to the sequence
@@ -66,7 +65,7 @@ export const findSequence = (matrix, cell, parentCell, parentIndex, sequenceLeft
     }
 
     // 1 needs special handling as it's the only number which repeats in the sequence
-    if (cell.count === 1 && parentCell.count === 1 && parentIndex === 3) {
+    if (cell.count === 1 && parentCell.count === 1 && parentIndex === 2) {
         index--;
     }
 

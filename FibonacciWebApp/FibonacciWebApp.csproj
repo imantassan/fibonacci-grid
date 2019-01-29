@@ -38,6 +38,7 @@
     <None Remove="app\src\components\MatrixCell.js" />
     <None Remove="app\src\config\index.js" />
     <None Remove="app\src\helpers\fibonacciSequence.js" />
+    <None Remove="app\src\helpers\fibonacciSequence.test.js" />
     <None Remove="app\src\index.js" />
     <None Remove="app\src\registerServiceWorker.js" />
     <None Remove="app\src\store\configureStore.js" />
@@ -54,13 +55,13 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="app\build\service-worker.js" />
-    <TypeScriptCompile Include="app\build\static\js\main.02a5e8ce.js" />
     <TypeScriptCompile Include="app\src\App.js" />
     <TypeScriptCompile Include="app\src\App.test.js" />
     <TypeScriptCompile Include="app\src\components\Layout.js" />
     <TypeScriptCompile Include="app\src\components\Matrix.js" />
     <TypeScriptCompile Include="app\src\components\MatrixCell.js" />
     <TypeScriptCompile Include="app\src\config\index.js" />
+    <TypeScriptCompile Include="app\src\helpers\fibonacciSequence.test.js" />
     <TypeScriptCompile Include="app\src\helpers\fibonacciSequence.js" />
     <TypeScriptCompile Include="app\src\index.js" />
     <TypeScriptCompile Include="app\src\registerServiceWorker.js" />

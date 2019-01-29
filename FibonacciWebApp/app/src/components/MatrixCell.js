@@ -21,7 +21,12 @@ export default class MatrixCell extends React.Component {
     getCount = () => {
         const { cell } = this.props;
 
-        return cell.temporaryCount !== null ? cell.temporaryCount : cell.count;
+        let count = cell.temporaryCount !== null ? cell.temporaryCount : cell.count;
+        if (count === 0) {
+            count = '';
+        }
+
+        return count;
     };
 
     render() {
